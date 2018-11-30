@@ -21,6 +21,7 @@ import { DataService} from "./data.service";
 import { SearchBarComponent } from "./components/search-bar/search-bar.component";
 import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { TextFormatDirective } from './directives/text-format.directive';
+import { BlogCreateComponent } from './components/blog-create/blog-create.component';
 
 const appRoutes: Routes = [
   {
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
   {
     path: 'quiz',
     component: QuizComponent,
+  },
+  {
+    path: 'blog/create',
+    component: BlogCreateComponent,
   },
   {
     path: 'blog',
@@ -66,7 +71,8 @@ const appRoutes: Routes = [
     FilterPipe,
     SearchBarComponent,
     BlogHomeComponent,
-    TextFormatDirective
+    TextFormatDirective,
+    BlogCreateComponent
   ],
   imports: [
     BrowserModule,

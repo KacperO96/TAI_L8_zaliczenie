@@ -14,7 +14,7 @@ export class DataServiceService {
   }
 
   get(id){
-    return this.http.get(this.url + '/api/posts' + id)
+    return this.http.get(this.url + '/api/post/' + id)
       .pipe();
   }
 
@@ -24,4 +24,10 @@ export class DataServiceService {
         map((x: any[])=> x)
       );
   }
+
+  addPost(data){
+    return this.http.post(this.url + '/api/post/',  data).pipe();
+  }
+
+
 }
